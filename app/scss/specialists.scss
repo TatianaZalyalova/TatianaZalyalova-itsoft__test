@@ -1,0 +1,64 @@
+.specialists {
+  margin-bottom: 70px;
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .specialists__title-block {
+    width: 260px;
+    margin-right: 32px;
+  }
+  .specialists__video-list {
+    width: 847px;
+    padding-top: 7px;
+    max-width: 100%;
+    .specialists__video {
+      width: 100%;
+    }
+
+    .slick-dots {
+      text-align: left;
+      bottom: -38px;
+      li {
+        height: 14px;
+        width: 14px;
+        margin: 0 9px;
+        &:first-child {
+          margin-left: 0;
+        }
+        button {
+          width: 14px;
+          height: 14px;
+          &:before {
+            content: "";
+            border: 1px solid #47093e;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            opacity: 1;
+          }
+        }
+      }
+
+      li.slick-active button:before {
+        background-color: #47093e;
+      }
+    }
+  }
+}
+@media (max-width: 1170px) {
+  .specialists {
+    .container {
+      display: block;
+    }
+    .specialists__title-block {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+      .specialists__title {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

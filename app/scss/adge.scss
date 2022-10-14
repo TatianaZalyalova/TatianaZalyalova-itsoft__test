@@ -1,0 +1,127 @@
+.adge {
+  margin-bottom: 127px;
+  .adge__list {
+    display: flex;
+    justify-content: flex-start;
+    .adge__item {
+      padding-left: 97px;
+      background-position: top left;
+      background-repeat: no-repeat;
+      font-family: "Merriweather";
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 154.8%;
+      color: #242424;
+      padding-top: 8px;
+      padding-bottom: 10px;
+      .adge__text {
+        font-family: inherit;
+
+        .info {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          @include background-default;
+          background-image: url(../images/info.svg);
+          background-size: cover;
+          position: absolute;
+          bottom: 7px;
+          right: 0;
+          &:before {
+            content: "Правила приема.";
+            position: absolute;
+            width: 120px;
+            padding: 10px;
+            border: 1px solid #47093e;
+            top: -50px;
+            right: 0;
+            background-color: #ffffff;
+            display: none;
+            font-size: 14px;
+            line-height: 1;
+          }
+          &:hover:before {
+            display: block;
+          }
+        }
+      }
+
+      & + .adge__item {
+        margin-left: 127px;
+      }
+      &.adge__text--effect {
+        background-image: url(../images/aim.svg);
+        width: 262px;
+      }
+      &.adge__text--dose {
+        background-image: url(../images/square.svg);
+        width: 262px;
+        background-position: 0px 4px;
+      }
+      &.adge__text--method {
+        background-image: url(../images/pill.svg);
+        padding-right: 38px;
+        position: relative;
+        padding-bottom: 10px;
+        background-position: 2px 5px;
+        padding-left: 99px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .adge {
+    .adge__list {
+      justify-content: space-between;
+      .adge__item {
+        & + .adge__item {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .adge {
+    .adge__list {
+      .adge__item {
+        width: 200px;
+        padding-left: 50px;
+        font-size: 14px;
+        background-size: 40px auto;
+        &.adge__text--method {
+          width: 270px;
+          padding-left: 50px;
+        }
+        &.adge__text--effect {
+          width: 200px;
+        }
+        &.adge__text--dose {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .adge {
+    .adge__list {
+      display: block;
+      .adge__item {
+        & + .adge__item {
+          margin-left: 0;
+          margin-top: 25px;
+        }
+        .adge__text {
+          .info {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

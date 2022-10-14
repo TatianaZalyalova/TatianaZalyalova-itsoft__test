@@ -1,0 +1,298 @@
+.banner {
+  position: relative;
+  margin-bottom: 148px;
+  .banner__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    .banner__svg-mobile {
+      display: none;
+    }
+  }
+  .container {
+    display: flex;
+  }
+
+  .banner__left {
+    width: 360px;
+  }
+
+  .banner__title {
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 100%;
+    text-align: left;
+    margin-bottom: 207px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .banner__link-list {
+    .banner__link-inner + .banner__link-inner {
+      margin-top: 32px;
+    }
+    .banner__link {
+      display: inline-block;
+      padding-top: 23px;
+      padding-bottom: 23px;
+      padding-left: 97px;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include background-default;
+      }
+      &.banner__link--scheme {
+        &:before {
+          width: 67px;
+          height: 67px;
+          background-image: url(../images/scheme.svg);
+        }
+      }
+      &.banner__link--instruction {
+        padding-top: 22px;
+        &:before {
+          width: 68px;
+          height: 67px;
+          background-image: url(../images/instruction.svg);
+        }
+      }
+      &.banner__link--buy {
+        padding-top: 32px;
+        padding-bottom: 30px;
+        &:before {
+          width: 68px;
+          height: 80px;
+          background-image: url(../images/mark_buy.svg);
+          top: 1px;
+        }
+      }
+    }
+  }
+  .banner__right {
+    position: relative;
+    left: -65px;
+    width: 870px;
+  }
+  .banner__photos {
+    width: 870px;
+    padding-bottom: 86px;
+    margin-bottom: 32px;
+    .banner__photo-inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+      padding-top: 108px;
+      padding-bottom: 60px;
+      .banner__photo--abs {
+        position: absolute;
+        bottom: 0;
+        left: 190px;
+      }
+
+      .banner__photo--full {
+        margin-right: 64px;
+        margin-top: 9px;
+      }
+    }
+
+    .slick-next,
+    .slick-prev {
+      width: 68px;
+      height: 68px;
+      bottom: 0;
+      top: unset;
+      transform: none;
+      z-index: 2;
+      &:before,
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        @include background-default;
+      }
+    }
+
+    .slick-next {
+      right: calc(50% - 146px);
+
+      &:before {
+        background-image: url(../images/right_arrow_slider.svg);
+      }
+    }
+    .slick-prev {
+      left: calc(50% - 20px);
+      &:before {
+        background-image: url(../images/left_arrow_slider.svg);
+      }
+    }
+  }
+
+  .banner__btn {
+    margin-left: 366px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1170px) {
+  .banner {
+    margin-bottom: 100px;
+    .container {
+      display: block;
+    }
+    .banner__left,
+    .banner__right {
+      width: 100%;
+    }
+    .banner__right {
+      left: 0;
+    }
+    .banner__title {
+      margin-bottom: 50px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .banner__link-list {
+      display: none;
+    }
+
+    .banner__photos {
+      width: 100%;
+      .banner__photo-inner {
+        padding-top: 0;
+      }
+    }
+    .banner__btn {
+      border: 1px solid #590d56;
+      color: #590d56;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
+
+    .banner__photos {
+      .slick-prev {
+        left: calc(50% - 78px);
+        &:before {
+          background-image: url(../images/left_arrow_slider_purple.svg);
+        }
+      }
+      .slick-next {
+        right: calc(50% - 78px);
+        &:before {
+          background-image: url(../images/right_arrow_slider_purple.svg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 915px) {
+  .banner {
+    margin-bottom: 50px;
+    .banner__photos {
+      .banner__photo-inner {
+        .banner__photo--full {
+          width: 52%;
+          margin-right: 20px;
+        }
+        .banner__photo--half {
+          width: 38%;
+        }
+        .banner__photo--abs {
+          left: 17%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    .banner__photos {
+      .banner__photo-inner {
+        .banner__photo--full,
+        .banner__photo--half {
+          display: none;
+        }
+        .banner__photo--abs {
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    margin-bottom: 30px;
+    .container {
+      margin: 0;
+    }
+    .banner__back {
+      .banner__svg-mobile {
+        display: block;
+      }
+
+      .banner__svg {
+        display: none;
+      }
+    }
+
+    .banner__title {
+      font-size: 45px;
+      line-height: 90%;
+      margin-bottom: 17px;
+      margin-right: 13px;
+      margin-left: 13px;
+    }
+    .banner__photos {
+      padding-bottom: 0;
+      margin-bottom: 16px;
+      .banner__photo-inner {
+        padding-bottom: 43px;
+        .banner__photo--abs {
+          max-width: none;
+          width: 314px;
+          position: relative;
+          left: -36px;
+        }
+      }
+
+      .slick-slide {
+        overflow: hidden;
+      }
+
+      .slick-next,
+      .slick-prev {
+        width: 34px;
+        height: 34px;
+      }
+      .slick-prev {
+        left: calc(50% - 42px);
+      }
+      .slick-next {
+        right: calc(50% - 42px);
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .banner {
+    .banner__back {
+      .banner__svg-mobile {
+        padding-top: 43px;
+      }
+    }
+  }
+}

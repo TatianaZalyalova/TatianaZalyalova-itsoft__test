@@ -1,0 +1,160 @@
+.informative {
+  background-image: url(../images/informative__back.svg);
+  background-size: 1440px 857px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 238px;
+  padding-bottom: 53px;
+  margin-top: -80px;
+  margin-bottom: 80px;
+  .informative__title-wrap {
+    width: 260px;
+    margin-right: 31px;
+    .informative__info {
+      color: #ffffff;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .article__list {
+    width: 849px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 5px;
+    margin-bottom: 36px;
+    max-width: 100%;
+    .article__item-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 556px;
+      flex-wrap: wrap;
+    }
+    .article__item {
+      .article__link {
+        display: block;
+        width: 263px;
+        background-size: cover;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 100%;
+        color: #ffffff;
+        text-decoration: none;
+        padding-top: 24px;
+        padding-left: 28px;
+        padding-right: 24px;
+        padding-bottom: 20px;
+        max-width: 100%;
+      }
+
+      &.exercise {
+        background: linear-gradient(
+            179.96deg,
+            rgba(71, 9, 62, 0.9) -0.95%,
+            rgba(71, 9, 62, 0) 99.97%
+          ),
+          url(../images/exercise_article.jpg);
+        .article__link {
+          padding-top: 29px;
+          padding-left: 28px;
+          height: 457px;
+        }
+      }
+      &.diagnosis {
+        background: linear-gradient(
+            179.96deg,
+            rgba(71, 9, 62, 0.9) -0.95%,
+            rgba(71, 9, 62, 0) 99.97%
+          ),
+          url(../images/diagnosis_article.jpg);
+        height: 263px;
+        margin-bottom: 29px;
+        .article__link {
+          padding-left: 21px;
+        }
+      }
+      &.advice {
+        background: linear-gradient(
+            179.96deg,
+            rgba(71, 9, 62, 0.9) -0.95%,
+            rgba(71, 9, 62, 0) 99.97%
+          ),
+          url(../images/advice_article.jpg);
+        height: 263px;
+      }
+      &.facts {
+        background-color: #47093e;
+
+        .article__link {
+          width: 556px;
+          height: 165px;
+          padding-top: 31px;
+          padding-left: 21px;
+        }
+      }
+    }
+  }
+  .article__btn {
+    display: block;
+    margin-left: auto;
+  }
+}
+@media (max-width: 1170px) {
+  .informative {
+    //background-size: cover;
+    margin-top: 0;
+    padding-top: 150px;
+    margin-bottom: 40px;
+    .container {
+      display: block;
+    }
+
+    .informative__title-wrap {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 849px) {
+  .informative {
+    .article__list {
+      flex-direction: column;
+      .article__item {
+        &.exercise {
+          margin-bottom: 29px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .informative {
+    .article__list {
+      .article__item-inner {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .article__item {
+        &.facts {
+          width: 263px;
+          .article__link {
+            width: 100%;
+          }
+        }
+        &.advice {
+          margin-bottom: 29px;
+        }
+      }
+    }
+    .article__btn {
+      margin-left: 0;
+    }
+  }
+}

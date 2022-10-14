@@ -1,0 +1,244 @@
+.complex {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .complex__left-block {
+    width: 263px;
+    margin-right: 30px;
+    padding-top: 2px;
+  }
+
+  .complex__right-block {
+    flex-grow: 1;
+  }
+
+  .complex__doing-item {
+    border-bottom: 1px solid #47093e;
+    padding-top: 21px;
+    padding-bottom: 34px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    .complex__doing-link {
+      width: 133px;
+      margin-right: 159px;
+      height: 15px;
+    }
+    &:first-child {
+      border-top: 1px solid #47093e;
+    }
+    .complex__icon {
+      position: absolute;
+      &.complex__icon--fit {
+        top: 13px;
+        left: 117px;
+        .complex__icon-star {
+          animation: 10s linear infinite rotate;
+          transform-origin: center;
+        }
+      }
+      &.complex__icon--gravity {
+        right: -3px;
+        bottom: 6px;
+        .complex__icon--top {
+          animation: 3s linear infinite translate-top;
+        }
+        .complex__icon--bottom {
+          animation: 3s linear infinite translate-bottom;
+        }
+      }
+      &.complex__icon--ache {
+        top: -21px;
+        left: 50px;
+        .complex__icon--circle {
+          animation: 3s linear infinite scale;
+          transform-origin: center;
+        }
+      }
+      &.complex__icon--edema {
+        bottom: -24px;
+        right: 23px;
+        .complex__icon--right-line {
+          animation: 3s linear infinite translate-right;
+        }
+        .complex__icon--left-line {
+          animation: 3s linear infinite translate-left;
+        }
+      }
+      &.complex__icon--tone {
+        left: 123px;
+        bottom: -12px;
+        .complex__icon--inner {
+          animation: 3s linear infinite scale-decrease;
+          transform-origin: center;
+        }
+      }
+    }
+    .complex__doing-inner {
+      width: 360px;
+      min-height: 138px;
+      display: flex;
+      align-items: center;
+      .complex__doing-text {
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 100%;
+      }
+    }
+  }
+  .complex__content {
+    width: 230px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .complex {
+    .container {
+      display: block;
+    }
+    .complex__left-block,
+    .complex__content {
+      width: 100%;
+    }
+    .complex__left-block {
+      margin-bottom: 50px;
+    }
+    .complex__doing-item {
+      justify-content: space-between;
+      .complex__icon {
+        position: static;
+        //width: 15%;
+      }
+      .complex__doing-link {
+        margin-right: 30px;
+      }
+      .complex__doing-inner {
+        margin-right: 30px;
+        width: 44%;
+        .complex__doing-text {
+          font-size: 27px;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .complex__doing-list {
+      max-width: 847px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .complex {
+    .complex__doing-item {
+      flex-wrap: wrap;
+      .complex__doing-inner {
+        width: 130px;
+        min-height: 100px;
+        .complex__doing-text {
+          font-size: 18px;
+        }
+      }
+      .complex__doing-link {
+        width: 120px;
+        order: 1;
+      }
+      .complex__icon {
+        width: 100px;
+
+        //  display: none;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes translate-top {
+  from {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(7px, 7px);
+  }
+
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes translate-bottom {
+  from {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-7px, -7px);
+  }
+
+  to {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes scale {
+  from {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes translate-right {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes translate-left {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-decrease {
+  from {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.8);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
